@@ -7,4 +7,5 @@ class AppAssets {
   static const String storyNature2 = "assets/story_nature2.jpg";
   static const String storyNature3 = "assets/story_nature3.jpg";
   static const String backgroundProfile = "assets/backg_profile.jpg";
+  static const String logo = "assets/logo.png";
 }
