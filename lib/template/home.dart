@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_home/widgets/list_tile.dart';
+import 'package:responsive_home/widgets/search.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -8,7 +9,11 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
-        ListTilee(),
+        Expanded(child: ListTilee()),
+        Expanded(child: Search()),
+        Spacer(
+          flex: 3,
+        ),
       ],
     );
   }
