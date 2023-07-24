@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_home/constants/colors.dart';
 import 'package:responsive_home/template/drawer.dart';
 import 'package:responsive_home/template/home.dart';
 import 'package:responsive_home/template/profile.dart';
@@ -9,6 +10,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
+      backgroundColor: AppColors.white,
       body: SizedBox(
         child: Row(
           children: [
