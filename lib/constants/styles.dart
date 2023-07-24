@@ -7,4 +7,11 @@ class TextStyles {
   static TextStyle descStyle = const TextStyle(
       fontSize: 17, fontWeight: FontWeight.w600, color: AppColors.grey);
   static TextStyle catgStyle = const TextStyle(fontSize: 17);
+  static TextStyle titleButton =
+      const TextStyle(color: AppColors.white, fontSize: 17);
+}
+
+class Corners {
+  static BorderRadius sm = const BorderRadius.all(Radius.circular(10));
+  static BorderRadius med = const BorderRadius.all(Radius.circular(15));
 }
