@@ -7,7 +7,7 @@ class MyDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: AppColors.grey,
+      color: AppColors.white,
     );
   }
 }
