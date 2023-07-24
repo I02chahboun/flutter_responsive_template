@@ -10,7 +10,7 @@ class Search extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Row(
       children: [
-        Expanded(flex: 14, child: TextFiled()),
+        Expanded(flex: 20, child: TextFiled()),
         Spacer(),
         Expanded(
           flex: 2,
