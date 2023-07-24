@@ -1,0 +1,23 @@
+import 'package:flutter/material.dart';
+import 'package:responsive_home/constants/styles.dart';
+import 'package:responsive_home/constants/texts.dart';
+import 'package:responsive_home/widgets/notification_icon.dart';
+
+class ListTilee extends StatelessWidget {
+  const ListTilee({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      title: Text(
+        AppTexts.userDev,
+        style: TextStyles.titleStyle,
+      ),
+      subtitle: Text(
+        AppTexts.welcome,
+        style: TextStyles.descStyle,
+      ),
+      trailing: const NotificationIcon(),
+    );
+  }
+}
