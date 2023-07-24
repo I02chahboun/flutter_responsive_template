@@ -25,7 +25,10 @@ class CategDiscover extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              CategButton(title: AppTexts.catg1),
+              CategButton(
+                title: AppTexts.catg1,
+                color: AppColors.green,
+              ),
               SizedBox(
                 width: 25,
               ),
