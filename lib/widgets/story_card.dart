@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_home/constants/colors.dart';
-import 'package:responsive_home/constants/images.dart';
 import 'package:responsive_home/constants/styles.dart';
 import 'package:responsive_home/widgets/favorite_icon.dart';
 
 class StoryCard extends StatelessWidget {
-  final String title, subTitle;
+  final String image, title, subTitle;
   final double price;
   const StoryCard(
       {super.key,
+      required this.image,
       required this.title,
       required this.subTitle,
       required this.price});
@@ -19,8 +19,7 @@ class StoryCard extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       decoration: BoxDecoration(
           borderRadius: Corners.med,
-          image: const DecorationImage(
-              image: AssetImage(AppAssets.storyNature1), fit: BoxFit.cover)),
+          image: DecorationImage(image: AssetImage(image), fit: BoxFit.cover)),
       child: Align(
         alignment: Alignment.bottomCenter,
         child: Container(
