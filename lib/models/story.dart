@@ -9,6 +9,6 @@ class Story {
 
 final List<Story> data = [
   Story(AppAssets.storyNature1, AppTexts.userOne, AppTexts.userOneDesc, 200),
-  Story(AppAssets.storyNature2, AppTexts.userOne, AppTexts.userTwoDesc, 200),
-  Story(AppAssets.storyNature3, AppTexts.userOne, AppTexts.userTreeDesc, 200),
+  Story(AppAssets.storyNature2, AppTexts.userTwo, AppTexts.userTwoDesc, 200),
+  Story(AppAssets.storyNature3, AppTexts.userTree, AppTexts.userTreeDesc, 200),
 ];
