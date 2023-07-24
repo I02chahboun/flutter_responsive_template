@@ -9,9 +9,13 @@ class TextStyles {
   static TextStyle catgStyle = const TextStyle(fontSize: 17);
   static TextStyle titleButton =
       const TextStyle(color: AppColors.white, fontSize: 17);
+  static TextStyle subTitle =
+      const TextStyle(color: AppColors.grey, fontSize: 12);
+  static TextStyle titleCard =
+      const TextStyle(fontSize: 14, fontWeight: FontWeight.bold);
 }
 
 class Corners {
   static BorderRadius sm = const BorderRadius.all(Radius.circular(10));
-  static BorderRadius med = const BorderRadius.all(Radius.circular(15));
+  static BorderRadius med = const BorderRadius.all(Radius.circular(18));
 }
