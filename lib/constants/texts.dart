@@ -5,7 +5,7 @@ class AppTexts {
   static const String catg1 = "Popular Places";
   static const String catg2 = "Recommended";
   static const String catg3 = "Near Me";
-  static const String viewAll = "View All";
+  static const String viewAll = "View all";
   static const String userOne = "El-fouad";
   static const String userTwo = "M97Chahboun";
   static const String userTree = "I02Chahboun";
