@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:responsive_home/constants/colors.dart';
 import 'package:responsive_home/constants/styles.dart';
 import 'package:responsive_home/constants/texts.dart';
+import 'package:responsive_home/models/story.dart';
 import 'package:responsive_home/widgets/story_card.dart';
-import 'package:responsive_home/widgets/text_button.dart';
+import 'package:responsive_home/widgets/categ_button.dart';
 
 class CategDiscover extends StatelessWidget {
   const CategDiscover({super.key});
@@ -24,11 +25,17 @@ class CategDiscover extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              TextButtonn(title: AppTexts.catg1),
-              TextButtonn(title: AppTexts.catg2),
-              TextButtonn(title: AppTexts.catg3),
+              CategButton(title: AppTexts.catg1),
+              SizedBox(
+                width: 25,
+              ),
+              CategButton(title: AppTexts.catg2),
+              SizedBox(
+                width: 25,
+              ),
+              CategButton(title: AppTexts.catg3),
               Spacer(),
-              TextButtonn(
+              CategButton(
                 title: AppTexts.viewAll,
                 color: AppColors.green,
               ),
@@ -39,14 +46,16 @@ class CategDiscover extends StatelessWidget {
           flex: 5,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
-            itemCount: 4,
+            itemCount: data.length,
             itemBuilder: (BuildContext context, int index) {
-              return const Padding(
-                padding: EdgeInsets.all(8.0),
+              final Story story = data[index];
+              return Padding(
+                padding: const EdgeInsets.all(8.0),
                 child: StoryCard(
-                  title: AppTexts.userOne,
-                  subTitle: AppTexts.userOneDesc,
-                  price: 566,
+                  image: story.image,
+                  title: story.title,
+                  subTitle: story.subTitle,
+                  price: story.price,
                 ),
               );
             },
