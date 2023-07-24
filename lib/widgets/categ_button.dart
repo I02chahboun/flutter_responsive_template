@@ -24,7 +24,10 @@ class CategButton extends StatelessWidget {
                 children: [
                   Text(
                     title,
-                    style: TextStyle(color: color, fontSize: 18),
+                    style: TextStyle(
+                        color: color,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w700),
                   ),
                   const SizedBox(
                     width: 5,
