@@ -6,11 +6,15 @@ class NotificationIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return IconButton.filled(
-      onPressed: () {},
-      icon: const Icon(Icons.notifications_none_rounded),
-      style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all<Color>(AppColors.white),
+    return Badge(
+      smallSize: 12,
+      backgroundColor: AppColors.red,
+      child: IconButton.filled(
+        onPressed: () {},
+        icon: const Icon(Icons.notifications_none_rounded),
+        style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.all<Color>(AppColors.white),
+        ),
       ),
     );
   }
