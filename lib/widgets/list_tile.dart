@@ -9,6 +9,7 @@ class ListTilee extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      contentPadding: EdgeInsets.zero,
       title: Text(
         AppTexts.userDev,
         style: TextStyles.titleStyle,
