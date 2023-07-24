@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_home/constants/colors.dart';
-import 'package:responsive_home/screen/home.dart';
+import 'package:responsive_home/screen/home_page.dart';
 
 void main() {
   runApp(const MyApp());
