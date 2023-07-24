@@ -24,4 +24,6 @@ class AppTexts {
   static const String myProfile = "My Profile";
   static const String destination = "Destination Trip";
   static const String logOut = "Logout";
+  static const String search = "Search Destination";
+  static const String searchButton = "Search";
 }
