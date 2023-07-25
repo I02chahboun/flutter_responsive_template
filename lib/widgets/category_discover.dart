@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_home/constants/colors.dart';
 import 'package:responsive_home/constants/styles.dart';
 import 'package:responsive_home/constants/texts.dart';
 import 'package:responsive_home/models/story.dart';
@@ -27,7 +26,6 @@ class CategDiscover extends StatelessWidget {
             children: [
               CategButton(
                 title: AppTexts.catg1,
-                color: AppColors.green,
               ),
               SizedBox(
                 width: 25,
@@ -40,7 +38,6 @@ class CategDiscover extends StatelessWidget {
               Spacer(),
               CategButton(
                 title: AppTexts.viewAll,
-                color: AppColors.green,
               ),
             ],
           ),
@@ -63,7 +60,7 @@ class CategDiscover extends StatelessWidget {
               );
             },
           ),
-        )
+        ),
       ],
     );
   }
