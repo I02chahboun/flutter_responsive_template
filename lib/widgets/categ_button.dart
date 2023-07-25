@@ -5,9 +5,7 @@ import 'package:responsive_home/constants/texts.dart';
 
 class CategButton extends StatelessWidget {
   final String title;
-  final Color color;
-  const CategButton(
-      {super.key, required this.title, this.color = AppColors.grey});
+  const CategButton({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -24,8 +22,8 @@ class CategButton extends StatelessWidget {
                 children: [
                   Text(
                     title,
-                    style: TextStyle(
-                        color: color,
+                    style: const TextStyle(
+                        color: AppColors.green,
                         fontSize: 18,
                         fontWeight: FontWeight.w700),
                   ),
@@ -44,7 +42,7 @@ class CategButton extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
               child: Text(
                 title,
-                style: TextStyle(color: color, fontSize: 18),
+                style: const TextStyle(color: AppColors.grey, fontSize: 18),
               ),
             ),
     );
