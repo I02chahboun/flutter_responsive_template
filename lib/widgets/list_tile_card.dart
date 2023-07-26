@@ -10,36 +10,46 @@ class ListTileCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(8),
-      margin: const EdgeInsets.symmetric(vertical: 40),
-      decoration:
-          BoxDecoration(borderRadius: Corners.sm, color: AppColors.white),
+      padding: const EdgeInsets.all(10),
+      //margin: const EdgeInsets.symmetric(vertical: 40),
+      decoration: BoxDecoration(
+        borderRadius: Corners.sm,
+        color: AppColors.white,
+        boxShadow: [
+          BoxShadow(
+            color: AppColors.grey.withOpacity(0.3),
+            spreadRadius: 2,
+            blurRadius: 10,
+            offset: const Offset(0, 3),
+          ),
+        ],
+      ),
       child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,
           children: [
             Container(
+              width: 60,
+              height: 60,
               decoration: BoxDecoration(
-                boxShadow: [
-                  BoxShadow(
-                    color: AppColors.grey.withOpacity(0.4),
-                    spreadRadius: 2,
-                    blurRadius: 10,
-                    offset: const Offset(0, 3),
-                  ),
-                ],
                 borderRadius: Corners.sm,
                 image: const DecorationImage(
                     image: AssetImage(AppAssets.nature1), fit: BoxFit.cover),
               ),
             ),
-            const Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text("title"),
-                Text("subTitle"),
-                Text("price"),
-              ],
+            const SizedBox(
+              width: 10,
+            ),
+            const SizedBox(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text("title"),
+                  Text("subTitle"),
+                  Text("price"),
+                ],
+              ),
             ),
             const Spacer(),
             const FavoriteButton(),
