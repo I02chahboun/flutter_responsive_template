@@ -3,12 +3,12 @@ import 'package:responsive_home/constants/colors.dart';
 
 class TextStyles {
   static TextStyle titleStyle =
-      const TextStyle(fontSize: 24, fontWeight: FontWeight.bold);
+      const TextStyle(fontSize: 20, fontWeight: FontWeight.bold);
   static TextStyle descStyle = const TextStyle(
       fontSize: 17, fontWeight: FontWeight.w600, color: AppColors.grey);
-  static TextStyle catgStyle = const TextStyle(fontSize: 17);
+  static TextStyle catgStyle = const TextStyle(fontSize: 16);
   static TextStyle titleButton =
-      const TextStyle(color: AppColors.white, fontSize: 17);
+      const TextStyle(color: AppColors.white, fontSize: 16);
   static TextStyle subTitle =
       const TextStyle(color: AppColors.grey, fontSize: 12);
   static TextStyle titleCard =
