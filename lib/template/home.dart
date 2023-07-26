@@ -12,7 +12,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 8),
       decoration: BoxDecoration(
         borderRadius: Corners.med,
         color: AppColors.green.withOpacity(0.06),
@@ -22,7 +22,7 @@ class Home extends StatelessWidget {
           Expanded(flex: 1, child: ListTilee()),
           Expanded(flex: 2, child: Search()),
           Expanded(flex: 5, child: CategDiscover()),
-          Expanded(flex: 5, child: CategEvent()),
+          Expanded(flex: 7, child: CategEvent()),
         ],
       ),
     );
