@@ -9,16 +9,11 @@ class IconButtonn extends StatelessWidget {
   Widget build(BuildContext context) {
     return IconButton(
       onPressed: () {},
-      icon: const Padding(
-        padding: EdgeInsets.symmetric(vertical: 7.0),
-        child: Icon(
-          Icons.menu,
-          color: AppColors.white,
-        ),
+      icon: const Icon(
+        Icons.menu,
+        color: AppColors.white,
       ),
       style: ButtonStyle(
-          maximumSize: MaterialStateProperty.all(
-              Size.fromHeight(MediaQuery.of(context).size.height)),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
               RoundedRectangleBorder(borderRadius: Corners.sm)),
           backgroundColor: MaterialStateProperty.all(AppColors.green)),
