@@ -37,25 +37,40 @@ class CategEvent extends StatelessWidget {
             itemBuilder: (BuildContext context, int index) {
               final Date date = data[index];
               return Padding(
-                padding:
-                    EdgeInsets.symmetric(horizontal: index == 0 ? 0 : 27.0),
+                padding: EdgeInsets.symmetric(
+                    horizontal: index == 0 || index == 8 ? 0 : 27.0),
                 child: DateButton(day: date.day, nume: date.num),
               );
             },
           ),
         ),
-        Expanded(
-          flex: 3,
-          child: GridView.builder(
-            //physics: const NeverScrollableScrollPhysics(),
-            itemCount: 4,
-            itemBuilder: (BuildContext context, int index) {
-              return const ListTileCard();
-            },
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2, mainAxisSpacing: 5, crossAxisSpacing: 5),
+        const Expanded(
+          flex: 2,
+          child: Row(
+            children: [
+              Expanded(child: ListTileCard()),
+              SizedBox(
+                width: 10,
+              ),
+              Expanded(child: ListTileCard()),
+            ],
           ),
-        )
+        ),
+        const SizedBox(
+          height: 10,
+        ),
+        const Expanded(
+          flex: 2,
+          child: Row(
+            children: [
+              Expanded(child: ListTileCard()),
+              SizedBox(
+                width: 10,
+              ),
+              Expanded(child: ListTileCard()),
+            ],
+          ),
+        ),
       ],
     );
   }
