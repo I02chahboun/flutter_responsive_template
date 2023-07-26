@@ -9,6 +9,7 @@ class TextFiled extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: const EdgeInsets.symmetric(vertical: 20),
       decoration: BoxDecoration(
           color: AppColors.white,
           boxShadow: [
