@@ -9,12 +9,11 @@ class TextFiled extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: 20),
       decoration: BoxDecoration(
           color: AppColors.white,
           boxShadow: [
             BoxShadow(
-              color: AppColors.grey.withOpacity(0.3),
+              color: AppColors.grey.withOpacity(0.2),
               spreadRadius: 2,
               blurRadius: 10,
               offset: const Offset(0, 3),
