@@ -45,7 +45,7 @@ class CategEvent extends StatelessWidget {
           ),
         ),
         const Expanded(
-          flex: 2,
+          flex: 3,
           child: Row(
             children: [
               Expanded(child: ListTileCard()),
@@ -56,11 +56,8 @@ class CategEvent extends StatelessWidget {
             ],
           ),
         ),
-        const SizedBox(
-          height: 10,
-        ),
         const Expanded(
-          flex: 2,
+          flex: 3,
           child: Row(
             children: [
               Expanded(child: ListTileCard()),
