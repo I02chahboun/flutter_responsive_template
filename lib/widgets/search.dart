@@ -9,6 +9,7 @@ class Search extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Row(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Expanded(flex: 20, child: TextFiled()),
         Spacer(),
