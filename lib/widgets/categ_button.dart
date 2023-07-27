@@ -16,33 +16,30 @@ class CategButton extends StatelessWidget {
       ),
       onTap: () {},
       child: isViewAll
-          ? Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-              child: Row(
-                children: [
-                  Text(
-                    title,
-                    style: const TextStyle(
-                        color: AppColors.green,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w700),
-                  ),
-                  const SizedBox(
-                    width: 5,
-                  ),
-                  const Icon(
-                    Icons.arrow_forward,
-                    color: AppColors.green,
-                    size: 18,
-                  ),
-                ],
-              ),
+          ? Row(
+              children: [
+                Text(
+                  title,
+                  style: const TextStyle(
+                      color: AppColors.green,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w700),
+                ),
+                const SizedBox(
+                  width: 5,
+                ),
+                const Icon(
+                  Icons.arrow_forward,
+                  color: AppColors.green,
+                  size: 18,
+                ),
+              ],
             )
           : Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
               child: Text(
                 title,
-                style: const TextStyle(color: AppColors.grey, fontSize: 18),
+                style: const TextStyle(color: AppColors.grey, fontSize: 16),
               ),
             ),
     );
