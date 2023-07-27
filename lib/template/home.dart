@@ -19,8 +19,8 @@ class Home extends StatelessWidget {
       ),
       child: const Column(
         children: [
-          Expanded(flex: 1, child: ListTilee()),
-          Expanded(flex: 2, child: Search()),
+          Expanded(flex: 2, child: ListTilee()),
+          Expanded(flex: 1, child: Search()),
           Expanded(flex: 5, child: CategDiscover()),
           Expanded(flex: 7, child: CategEvent()),
         ],
