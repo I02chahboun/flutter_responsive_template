@@ -16,6 +16,7 @@ class StoryCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: Sizes.width(context) * 0.13,
       padding: const EdgeInsets.all(8.0),
       decoration: BoxDecoration(
           borderRadius: Corners.med,
@@ -23,28 +24,27 @@ class StoryCard extends StatelessWidget {
       child: Align(
         alignment: Alignment.bottomCenter,
         child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
             decoration: BoxDecoration(
                 borderRadius: Corners.med, color: AppColors.white),
             child: Row(
               children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Text(
-                      title,
-                      style: TextStyles.titleCard,
-                    ),
-                    Text(
-                      subTitle,
-                      style: TextStyles.subTitle,
-                    ),
-                    Text(price.toString()),
-                  ],
-                ),
-                const SizedBox(
-                  width: 10,
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        title,
+                        style: TextStyles.titleCard,
+                      ),
+                      Text(
+                        subTitle,
+                        style: TextStyles.subTitle,
+                      ),
+                      Text(price.toString()),
+                    ],
+                  ),
                 ),
                 const FavoriteButton(),
               ],
