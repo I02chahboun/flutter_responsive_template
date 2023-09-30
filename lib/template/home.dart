@@ -26,6 +26,7 @@ class Home extends StatelessWidget {
             Search(),
             SizedBox(height: 30),
             CategDiscover(),
+            SizedBox(height: 20),
             CategEvent(),
           ],
         ),

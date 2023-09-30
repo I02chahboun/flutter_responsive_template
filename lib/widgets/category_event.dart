@@ -27,8 +27,9 @@ class CategEvent extends StatelessWidget {
               ),
             ],
           ),
+          const SizedBox(height: 8),
           SizedBox(
-            height: Sizes.height(context) / 6,
+            height: Sizes.height(context) * 0.08,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               physics: const NeverScrollableScrollPhysics(),
@@ -37,7 +38,7 @@ class CategEvent extends StatelessWidget {
                 final Date date = data[index];
                 return Padding(
                   padding: EdgeInsets.symmetric(
-                      horizontal: index == 0 || index == 8 ? 0 : 27.0),
+                      horizontal: index == 0 || index == 8 ? 0 : 22.0),
                   child: DateButton(day: date.day, nume: date.num),
                 );
               },
