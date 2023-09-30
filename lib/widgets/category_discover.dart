@@ -18,6 +18,7 @@ class CategDiscover extends StatelessWidget {
             AppTexts.categoryDicover,
             style: TextStyles.titleStyle,
           ),
+          const SizedBox(height: 8),
           const Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
@@ -32,13 +33,15 @@ class CategDiscover extends StatelessWidget {
                 width: 25,
               ),
               CategButton(title: AppTexts.catg3),
+              Spacer(),
               CategButton(
                 title: AppTexts.viewAll,
               ),
             ],
           ),
+          const SizedBox(height: 10),
           SizedBox(
-            height: Sizes.height(context) / 4,
+            height: Sizes.height(context) / 2.6,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: data.length,
