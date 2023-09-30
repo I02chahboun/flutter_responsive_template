@@ -15,8 +15,10 @@ class Search extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          TextFiled(),
+          Expanded(child: TextFiled()),
+          SizedBox(width: 15),
           IconButtonn(),
+          SizedBox(width: 15),
           ElevatedButtonn(),
         ],
       ),
