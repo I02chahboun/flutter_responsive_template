@@ -10,6 +10,7 @@ class ListTileCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: Sizes.width(context) * 0.25,
       padding: const EdgeInsets.all(10),
       //margin: const EdgeInsets.symmetric(vertical: 40),
       decoration: BoxDecoration(

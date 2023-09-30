@@ -44,6 +44,7 @@ class CategEvent extends StatelessWidget {
               },
             ),
           ),
+          const SizedBox(height: 25),
           const Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
