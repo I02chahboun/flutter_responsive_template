@@ -11,7 +11,7 @@ class FavoriteButton extends StatelessWidget {
       icon: const Icon(
         Icons.favorite_border,
         color: AppColors.green,
-        size: 19,
+        size: 16,
       ),
       style: ButtonStyle(
         minimumSize: MaterialStateProperty.all(Size.zero),
