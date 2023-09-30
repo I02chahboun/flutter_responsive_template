@@ -13,14 +13,14 @@ class ElevatedButtonn extends StatelessWidget {
     return ElevatedButton(
         onPressed: () {},
         style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(AppColors.green),
-          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-              RoundedRectangleBorder(
-            borderRadius: Corners.sm,
-          )),
-        ),
+            backgroundColor: MaterialStateProperty.all(AppColors.green),
+            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                RoundedRectangleBorder(
+              borderRadius: Corners.sm,
+            )),
+            shadowColor: MaterialStateProperty.all(AppColors.grey)),
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 8.0),
+          padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 15),
           child: Text(
             AppTexts.searchButton,
             style: TextStyles.titleButton,
