@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_home/constants/colors.dart';
+import 'package:responsive_home/constants/styles.dart';
 import 'package:responsive_home/template/drawer.dart';
 import 'package:responsive_home/template/home.dart';
 import 'package:responsive_home/template/profile.dart';
@@ -9,17 +10,16 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: AppColors.white,
       body: SizedBox(
-        child: Row(
+        height: Sizes.height(context),
+        width: Sizes.width(context),
+        child: const Row(
           children: [
-            Expanded(flex: 2, child: MyDrawer()),
-            Expanded(flex: 6, child: Home()),
-            Expanded(
-              flex: 3,
-              child: Profile(),
-            )
+            Expanded(child: MyDrawer()),
+            Expanded(flex: 3, child: Home()),
+            Expanded(child: Profile())
           ],
         ),
       ),

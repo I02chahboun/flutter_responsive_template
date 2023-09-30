@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_home/constants/styles.dart';
 import 'package:responsive_home/widgets/icon_button.dart';
 import 'package:responsive_home/widgets/elevated_button.dart';
 import 'package:responsive_home/widgets/text_field.dart';
@@ -8,18 +9,17 @@ class Search extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
-        Expanded(flex: 20, child: TextFiled()),
-        Spacer(),
-        Expanded(
-          flex: 2,
-          child: IconButtonn(),
-        ),
-        Spacer(),
-        Expanded(flex: 5, child: ElevatedButtonn()),
-      ],
+    return SizedBox(
+      height: Sizes.height(context) * 0.08,
+      child: const Row(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          TextFiled(),
+          IconButtonn(),
+          ElevatedButtonn(),
+        ],
+      ),
     );
   }
 }

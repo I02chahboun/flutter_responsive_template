@@ -51,7 +51,6 @@ class ListTileCard extends StatelessWidget {
                 ],
               ),
             ),
-            const Spacer(),
             const FavoriteButton(),
           ]),
     );

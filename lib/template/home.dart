@@ -12,18 +12,22 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 8),
+      height: Sizes.height(context),
+      padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 8),
+      margin: const EdgeInsets.all(15),
       decoration: BoxDecoration(
         borderRadius: Corners.med,
         color: AppColors.green.withOpacity(0.06),
       ),
-      child: const Column(
-        children: [
-          Expanded(flex: 2, child: ListTilee()),
-          Expanded(flex: 1, child: Search()),
-          Expanded(flex: 5, child: CategDiscover()),
-          Expanded(flex: 7, child: CategEvent()),
-        ],
+      child: const SingleChildScrollView(
+        child: Column(
+          children: [
+            ListTilee(),
+            Search(),
+            CategDiscover(),
+            CategEvent(),
+          ],
+        ),
       ),
     );
   }

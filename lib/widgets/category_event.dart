@@ -11,10 +11,10 @@ class CategEvent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Expanded(
-          child: Row(
+    return SizedBox(
+      child: Column(
+        children: [
+          Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -27,48 +27,45 @@ class CategEvent extends StatelessWidget {
               ),
             ],
           ),
-        ),
-        Expanded(
-          flex: 2,
-          child: ListView.builder(
-            scrollDirection: Axis.horizontal,
-            physics: const NeverScrollableScrollPhysics(),
-            itemCount: data.length,
-            itemBuilder: (BuildContext context, int index) {
-              final Date date = data[index];
-              return Padding(
-                padding: EdgeInsets.symmetric(
-                    horizontal: index == 0 || index == 8 ? 0 : 27.0),
-                child: DateButton(day: date.day, nume: date.num),
-              );
-            },
+          SizedBox(
+            height: Sizes.height(context) / 6,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              physics: const NeverScrollableScrollPhysics(),
+              itemCount: data.length,
+              itemBuilder: (BuildContext context, int index) {
+                final Date date = data[index];
+                return Padding(
+                  padding: EdgeInsets.symmetric(
+                      horizontal: index == 0 || index == 8 ? 0 : 27.0),
+                  child: DateButton(day: date.day, nume: date.num),
+                );
+              },
+            ),
           ),
-        ),
-        const Expanded(
-          flex: 3,
-          child: Row(
+          const Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Expanded(child: ListTileCard()),
+              ListTileCard(),
               SizedBox(
                 width: 10,
               ),
-              Expanded(child: ListTileCard()),
+              ListTileCard(),
             ],
           ),
-        ),
-        const Expanded(
-          flex: 3,
-          child: Row(
+          const SizedBox(height: 20),
+          const Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Expanded(child: ListTileCard()),
+              ListTileCard(),
               SizedBox(
                 width: 10,
               ),
-              Expanded(child: ListTileCard()),
+              ListTileCard(),
             ],
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

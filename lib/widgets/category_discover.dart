@@ -10,18 +10,15 @@ class CategDiscover extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Expanded(
-          child: Text(
+    return SizedBox(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
             AppTexts.categoryDicover,
             style: TextStyles.titleStyle,
           ),
-        ),
-        const Expanded(
-          flex: 1,
-          child: Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               CategButton(
@@ -35,33 +32,32 @@ class CategDiscover extends StatelessWidget {
                 width: 25,
               ),
               CategButton(title: AppTexts.catg3),
-              Spacer(),
               CategButton(
                 title: AppTexts.viewAll,
               ),
             ],
           ),
-        ),
-        Expanded(
-          flex: 5,
-          child: ListView.builder(
-            scrollDirection: Axis.horizontal,
-            itemCount: data.length,
-            itemBuilder: (BuildContext context, int index) {
-              final Story story = data[index];
-              return Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: StoryCard(
-                  image: story.image,
-                  title: story.title,
-                  subTitle: story.subTitle,
-                  price: story.price,
-                ),
-              );
-            },
+          SizedBox(
+            height: Sizes.height(context) / 4,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: data.length,
+              itemBuilder: (BuildContext context, int index) {
+                final Story story = data[index];
+                return Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: StoryCard(
+                    image: story.image,
+                    title: story.title,
+                    subTitle: story.subTitle,
+                    price: story.price,
+                  ),
+                );
+              },
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

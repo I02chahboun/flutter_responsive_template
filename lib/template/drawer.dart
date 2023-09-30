@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_home/constants/colors.dart';
+import 'package:responsive_home/constants/styles.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
@@ -7,7 +8,9 @@ class MyDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: AppColors.white,
+      height: Sizes.height(context),
+      width: Sizes.width(context) / 4,
+      color: AppColors.grey,
     );
   }
 }

@@ -9,6 +9,8 @@ class TextFiled extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: Sizes.height(context) * 0.08,
+      width: Sizes.width(context) / 3,
       decoration: BoxDecoration(
           color: AppColors.white,
           boxShadow: [
