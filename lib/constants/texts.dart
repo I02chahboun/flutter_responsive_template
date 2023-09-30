@@ -9,9 +9,9 @@ class AppTexts {
   static const String userOne = "El-fouad";
   static const String userTwo = "M97Chahboun";
   static const String userTree = "I02Chahboun";
-  static const String userOneDesc = "developer web full stack";
-  static const String userTwoDesc = "developer mobile full stack";
-  static const String userTreeDesc = "developer mobile front-end";
+  static const String userOneDesc = "web full stack";
+  static const String userTwoDesc = "full stack";
+  static const String userTreeDesc = "software enginner";
   static const String categoryEvent = "Event Dates";
   static const String dashboard = "Dashboard";
   static const String discover = "Discover";
