@@ -19,12 +19,9 @@ class ElevatedButtonn extends StatelessWidget {
               borderRadius: Corners.sm,
             )),
             shadowColor: MaterialStateProperty.all(AppColors.grey)),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 15),
-          child: Text(
-            AppTexts.searchButton,
-            style: TextStyles.titleButton,
-          ),
+        child: Text(
+          AppTexts.searchButton,
+          style: TextStyles.titleButton,
         ));
   }
 }
