@@ -46,9 +46,9 @@ class CategDiscover extends StatelessWidget {
             height: Sizes.height(context) / 2.6,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
-              itemCount: cards.length,
+              itemCount: discoverData.length,
               itemBuilder: (BuildContext context, int index) {
-                final CardModel story = cards[index];
+                final CardModel story = discoverData[index];
                 return Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: StoryCard(
