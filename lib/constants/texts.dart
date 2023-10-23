@@ -33,4 +33,8 @@ class AppTexts {
   static const String fri = "Fri";
   static const String sat = "Sat";
   static const String sun = "Sun";
+  static const String nature1 = "Mt. Kerinci";
+  static const String nature2 = "Mt. Slamet";
+  static const String snow1 = "Mt. Latuk";
+  static const String snow2 = "Mt. Cereme";
 }
