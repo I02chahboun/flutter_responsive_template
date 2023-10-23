@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_home/constants/styles.dart';
 import 'package:responsive_home/constants/texts.dart';
-import 'package:responsive_home/models/story.dart';
+import 'package:responsive_home/models/card_model.dart';
 import 'package:responsive_home/widgets/story_card.dart';
 import 'package:responsive_home/widgets/categ_button.dart';
 
