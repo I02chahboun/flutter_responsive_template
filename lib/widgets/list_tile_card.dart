@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_home/constants/colors.dart';
-import 'package:responsive_home/constants/images.dart';
 import 'package:responsive_home/constants/styles.dart';
+import 'package:responsive_home/models/card_model.dart';
 import 'package:responsive_home/widgets/favorite_icon.dart';
 
 class ListTileCard extends StatelessWidget {
-  const ListTileCard({super.key});
+  final CardModel event;
+  const ListTileCard({super.key, required this.event});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: Sizes.width(context) * 0.25,
       padding: const EdgeInsets.all(10),
-      //margin: const EdgeInsets.symmetric(vertical: 40),
       decoration: BoxDecoration(
         borderRadius: Corners.sm,
         color: AppColors.white,
@@ -29,26 +28,27 @@ class ListTileCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,
           children: [
-            Container(
-              width: 60,
-              height: 60,
-              decoration: BoxDecoration(
-                borderRadius: Corners.sm,
-                image: const DecorationImage(
-                    image: AssetImage(AppAssets.nature1), fit: BoxFit.cover),
+            Expanded(
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: Corners.sm,
+                  image: DecorationImage(
+                      image: AssetImage(event.image), fit: BoxFit.cover),
+                ),
               ),
             ),
             const SizedBox(
               width: 10,
             ),
-            const SizedBox(
+            Expanded(
+              flex: 3,
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("title"),
-                  Text("subTitle"),
-                  Text("price"),
+                  Text(event.title, style: TextStyles.titleCard),
+                  Text(event.subTitle, style: TextStyles.subTitle),
+                  Text("${event.price}/day", style: TextStyles.subTitle),
                 ],
               ),
             ),

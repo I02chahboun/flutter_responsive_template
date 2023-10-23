@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_home/constants/styles.dart';
 import 'package:responsive_home/constants/texts.dart';
-import 'package:responsive_home/models/date.dart';
+import 'package:responsive_home/models/card_model.dart';
+import 'package:responsive_home/models/date_model.dart';
 import 'package:responsive_home/widgets/categ_button.dart';
 import 'package:responsive_home/widgets/date_button.dart';
 import 'package:responsive_home/widgets/list_tile_card.dart';
@@ -44,26 +45,20 @@ class CategEvent extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 25),
-          const Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              ListTileCard(),
-              SizedBox(
-                width: 10,
-              ),
-              ListTileCard(),
-            ],
-          ),
-          const SizedBox(height: 20),
-          const Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              ListTileCard(),
-              SizedBox(
-                width: 10,
-              ),
-              ListTileCard(),
-            ],
+          GridView.builder(
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                mainAxisSpacing: 20,
+                crossAxisSpacing: 20,
+                childAspectRatio: 1,
+                mainAxisExtent: 90),
+            itemCount: eventData.length,
+            itemBuilder: (context, index) {
+              final CardModel event = eventData[index];
+              return ListTileCard(event: event);
+            },
           ),
         ],
       ),
