@@ -36,7 +36,7 @@ class CategButton extends StatelessWidget {
               ],
             )
           : Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+              padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
               child: Text(
                 title,
                 style: const TextStyle(color: AppColors.grey, fontSize: 16),
