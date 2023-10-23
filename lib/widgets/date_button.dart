@@ -21,12 +21,11 @@ class DateButton extends StatelessWidget {
               top: Radius.circular(30), bottom: Radius.circular(30)),
         ),
         child: Column(mainAxisSize: MainAxisSize.min, children: [
-          Text(
-            day,
-            style: const TextStyle(fontSize: 12, color: AppColors.grey),
-          ),
-          const SizedBox(
-            height: 5,
+          Expanded(
+            child: Text(
+              day,
+              style: const TextStyle(fontSize: 12, color: AppColors.grey),
+            ),
           ),
           Text(
             nume.toString(),

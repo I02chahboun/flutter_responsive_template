@@ -15,7 +15,7 @@ class CategEvent extends StatelessWidget {
       child: Column(
         children: [
           Row(
-            crossAxisAlignment: CrossAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
@@ -32,7 +32,6 @@ class CategEvent extends StatelessWidget {
             height: Sizes.height(context) * 0.08,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
-              physics: const NeverScrollableScrollPhysics(),
               itemCount: data.length,
               itemBuilder: (BuildContext context, int index) {
                 final Date date = data[index];
