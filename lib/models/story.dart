@@ -7,8 +7,14 @@ class Story {
   Story(this.image, this.title, this.subTitle, this.price);
 }
 
-final List<Story> data = [
+final List<Story> storyData = [
   Story(AppAssets.storyNature1, AppTexts.userOne, AppTexts.userOneDesc, 200),
   Story(AppAssets.storyNature2, AppTexts.userTwo, AppTexts.userTwoDesc, 200),
   Story(AppAssets.storyNature3, AppTexts.userTree, AppTexts.userTreeDesc, 200),
+];
+
+List<String> categoryDicover = [
+  AppTexts.catg1,
+  AppTexts.catg2,
+  AppTexts.catg3,
 ];
