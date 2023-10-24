@@ -30,8 +30,8 @@ class DateButton extends StatelessWidget {
           ),
           Text(
             nume.toString(),
-            style: TextStyles.body
-                .copyWith(fontWeight: FontWeight.bold, color: AppColors.black),
+            style: TextStyles.body.copyWith(
+                fontWeight: FontWeight.bold, color: AppColors.blueGrey),
           ),
         ]),
       ),

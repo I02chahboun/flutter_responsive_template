@@ -8,7 +8,7 @@ class NotificationIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return Badge(
       smallSize: 12,
-      backgroundColor: AppColors.red,
+      backgroundColor: AppColors.badge,
       child: IconButton.filled(
         onPressed: () {},
         icon: const Icon(Icons.notifications_none_rounded),

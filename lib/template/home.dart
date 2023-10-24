@@ -16,7 +16,7 @@ class Home extends StatelessWidget {
       margin: const EdgeInsets.all(15),
       decoration: BoxDecoration(
         borderRadius: Corners.med,
-        color: AppColors.green.withOpacity(0.06),
+        color: AppColors.greenAccent,
       ),
       child: const SingleChildScrollView(
         child: Padding(

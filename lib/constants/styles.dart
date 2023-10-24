@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:responsive_home/constants/colors.dart';
 
 class TextStyles {
-  static TextStyle title =
-      const TextStyle(fontSize: 20, fontWeight: FontWeight.bold);
+  static TextStyle title = const TextStyle(
+      fontSize: 20, fontWeight: FontWeight.bold, color: AppColors.blueGrey);
   static TextStyle subTitle = const TextStyle(
       fontSize: 16, fontWeight: FontWeight.w500, color: AppColors.grey);
   static TextStyle button = const TextStyle(
