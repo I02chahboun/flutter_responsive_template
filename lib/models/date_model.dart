@@ -6,7 +6,7 @@ class Date {
   Date({required this.day, required this.num});
 }
 
-List<Date> data = [
+List<Date> dates = [
   Date(day: AppTexts.sun, num: 12),
   Date(day: AppTexts.mon, num: 13),
   Date(day: AppTexts.tue, num: 14),
