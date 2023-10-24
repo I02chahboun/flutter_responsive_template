@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:responsive_home/constants/styles.dart';
 import 'package:responsive_home/constants/texts.dart';
 import 'package:responsive_home/models/card_model.dart';
-import 'package:responsive_home/models/date_model.dart';
 import 'package:responsive_home/widgets/categ_button.dart';
-import 'package:responsive_home/widgets/date_button.dart';
+import 'package:responsive_home/widgets/filter_dates.dart';
 import 'package:responsive_home/widgets/list_tile_card.dart';
 
 class CategEvent extends StatelessWidget {
@@ -32,18 +31,7 @@ class CategEvent extends StatelessWidget {
           const SizedBox(height: 8),
           SizedBox(
             height: Sizes.height(context) * 0.08,
-            child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: data.length,
-              itemBuilder: (BuildContext context, int index) {
-                final Date date = data[index];
-                return Padding(
-                  padding: EdgeInsets.symmetric(
-                      horizontal: index == 0 || index == 8 ? 0 : 22.0),
-                  child: DateButton(day: date.day, nume: date.num),
-                );
-              },
-            ),
+            child: const FilterDates(),
           ),
           const SizedBox(height: 25),
           GridView.builder(
