@@ -21,8 +21,9 @@ class CategDiscover extends StatelessWidget {
           ),
           const SizedBox(height: 8),
           SizedBox(
-            height: Sizes.height(context) * 0.05,
+            height: Sizes.height(context) * 0.06,
             child: Row(
+              mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Expanded(
@@ -31,8 +32,14 @@ class CategDiscover extends StatelessWidget {
                     itemCount: categoryDicover.length,
                     itemBuilder: (context, index) {
                       final String cateogry = categoryDicover[index];
-                      return CategButton(
-                        title: cateogry,
+                      return Padding(
+                        padding: EdgeInsets.symmetric(
+                            horizontal: index == 0 ? 0.0 : 8.0),
+                        child: Center(
+                          child: CategButton(
+                            title: cateogry,
+                          ),
+                        ),
                       );
                     },
                   ),
