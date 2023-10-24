@@ -15,43 +15,47 @@ class StoryCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: Sizes.width(context) * 0.13,
-      padding: const EdgeInsets.all(8.0),
-      decoration: BoxDecoration(
-          borderRadius: Corners.med,
-          image: DecorationImage(image: AssetImage(image), fit: BoxFit.cover)),
-      child: Align(
-        alignment: Alignment.bottomCenter,
-        child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
-            decoration: BoxDecoration(
-                borderRadius: Corners.med, color: AppColors.white),
-            child: Row(
-              children: [
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Text(title,
-                          style: TextStyles.title.copyWith(fontSize: 15),
-                          softWrap: false,
-                          overflow: TextOverflow.fade),
-                      Text(subTitle,
-                          style: TextStyles.subTitle.copyWith(fontSize: 13),
-                          softWrap: false,
-                          overflow: TextOverflow.fade),
-                      Text(price.toString(),
-                          style: TextStyles.body.copyWith(fontSize: 11),
-                          softWrap: false,
-                          overflow: TextOverflow.fade),
-                    ],
+    return AspectRatio(
+      aspectRatio: 0.7,
+      child: Container(
+        padding: const EdgeInsets.all(8.0),
+        decoration: BoxDecoration(
+            borderRadius: Corners.med,
+            image:
+                DecorationImage(image: AssetImage(image), fit: BoxFit.cover)),
+        child: Align(
+          alignment: Alignment.bottomCenter,
+          child: Container(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10),
+              decoration: BoxDecoration(
+                  borderRadius: Corners.med, color: AppColors.white),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(title,
+                            style: TextStyles.title.copyWith(fontSize: 15),
+                            softWrap: false,
+                            overflow: TextOverflow.fade),
+                        Text(subTitle,
+                            style: TextStyles.subTitle.copyWith(fontSize: 13),
+                            softWrap: false,
+                            overflow: TextOverflow.fade),
+                        Text(price.toString(),
+                            style: TextStyles.body.copyWith(fontSize: 11),
+                            softWrap: false,
+                            overflow: TextOverflow.fade),
+                      ],
+                    ),
                   ),
-                ),
-                const FavoriteButton(),
-              ],
-            )),
+                  const FavoriteButton(),
+                ],
+              )),
+        ),
       ),
     );
   }

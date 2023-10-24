@@ -28,7 +28,8 @@ class ListTileCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,
           children: [
-            Expanded(
+            AspectRatio(
+              aspectRatio: 1,
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: Corners.sm,
@@ -38,7 +39,7 @@ class ListTileCard extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              width: 10,
+              width: 15,
             ),
             Expanded(
               flex: 3,
