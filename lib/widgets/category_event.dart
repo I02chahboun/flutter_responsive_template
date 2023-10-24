@@ -21,7 +21,7 @@ class CategEvent extends StatelessWidget {
             children: [
               Text(
                 AppTexts.categoryEvent,
-                style: TextStyles.titleStyle,
+                style: TextStyles.title,
               ),
               const CategButton(
                 title: AppTexts.viewAll,

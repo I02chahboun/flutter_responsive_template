@@ -13,22 +13,24 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: Sizes.height(context),
-      padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 8),
       margin: const EdgeInsets.all(15),
       decoration: BoxDecoration(
         borderRadius: Corners.med,
         color: AppColors.green.withOpacity(0.06),
       ),
       child: const SingleChildScrollView(
-        child: Column(
-          children: [
-            ListTilee(),
-            Search(),
-            SizedBox(height: 30),
-            CategDiscover(),
-            SizedBox(height: 20),
-            CategEvent(),
-          ],
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
+          child: Column(
+            children: [
+              ListTilee(),
+              Search(),
+              SizedBox(height: 30),
+              CategDiscover(),
+              SizedBox(height: 20),
+              CategEvent(),
+            ],
+          ),
         ),
       ),
     );

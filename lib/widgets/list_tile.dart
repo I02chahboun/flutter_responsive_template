@@ -12,11 +12,11 @@ class ListTilee extends StatelessWidget {
       contentPadding: EdgeInsets.zero,
       title: Text(
         AppTexts.userDev,
-        style: TextStyles.titleStyle,
+        style: TextStyles.title,
       ),
       subtitle: Text(
         AppTexts.welcome,
-        style: TextStyles.descStyle,
+        style: TextStyles.subTitle,
       ),
       trailing: const NotificationIcon(),
     );

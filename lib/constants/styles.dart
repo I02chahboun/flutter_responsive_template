@@ -2,17 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:responsive_home/constants/colors.dart';
 
 class TextStyles {
-  static TextStyle titleStyle =
-      const TextStyle(fontSize: 22, fontWeight: FontWeight.bold);
-  static TextStyle descStyle = const TextStyle(
-      fontSize: 17, fontWeight: FontWeight.w600, color: AppColors.grey);
-  static TextStyle catgStyle = const TextStyle(fontSize: 16);
-  static TextStyle titleButton =
-      const TextStyle(color: AppColors.white, fontSize: 16);
-  static TextStyle subTitle =
-      const TextStyle(color: AppColors.grey, fontSize: 12);
-  static TextStyle titleCard =
-      const TextStyle(fontSize: 14, fontWeight: FontWeight.bold);
+  static TextStyle title =
+      const TextStyle(fontSize: 20, fontWeight: FontWeight.bold);
+  static TextStyle subTitle = const TextStyle(
+      fontSize: 16, fontWeight: FontWeight.w500, color: AppColors.grey);
+  static TextStyle button = const TextStyle(
+      fontSize: 17, fontWeight: FontWeight.w500, color: AppColors.grey);
+  static TextStyle body = const TextStyle(
+      fontSize: 14, fontWeight: FontWeight.normal, color: AppColors.grey);
 }
 
 class Corners {

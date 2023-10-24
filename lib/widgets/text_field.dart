@@ -22,11 +22,12 @@ class TextFiled extends StatelessWidget {
           borderRadius: Corners.sm),
       child: TextField(
         decoration: InputDecoration(
+          contentPadding: EdgeInsets.zero,
           fillColor: AppColors.white,
           border: OutlineInputBorder(
               borderRadius: Corners.sm, borderSide: BorderSide.none),
           hintText: AppTexts.search,
-          hintStyle: const TextStyle(color: AppColors.grey),
+          hintStyle: TextStyles.subTitle,
           prefixIcon: const Icon(
             Icons.search,
             color: AppColors.grey,

@@ -42,14 +42,28 @@ class ListTileCard extends StatelessWidget {
             ),
             Expanded(
               flex: 3,
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(event.title, style: TextStyles.titleCard),
-                  Text(event.subTitle, style: TextStyles.subTitle),
-                  Text("${event.price}/day", style: TextStyles.subTitle),
-                ],
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 3.0),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(event.title,
+                        style: TextStyles.title.copyWith(fontSize: 15),
+                        softWrap: false,
+                        overflow: TextOverflow.fade),
+                    const SizedBox(height: 2),
+                    Text(event.subTitle,
+                        style: TextStyles.subTitle.copyWith(fontSize: 13),
+                        softWrap: false,
+                        overflow: TextOverflow.fade),
+                    const Spacer(),
+                    Text("${event.price}/day",
+                        style: TextStyles.body.copyWith(fontSize: 11),
+                        softWrap: false,
+                        overflow: TextOverflow.fade),
+                  ],
+                ),
               ),
             ),
             const FavoriteButton(),

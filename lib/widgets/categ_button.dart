@@ -20,10 +20,8 @@ class CategButton extends StatelessWidget {
               children: [
                 Text(
                   title,
-                  style: const TextStyle(
-                      color: AppColors.green,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w700),
+                  style: TextStyles.subTitle.copyWith(
+                      color: AppColors.green, fontWeight: FontWeight.w700),
                 ),
                 const SizedBox(
                   width: 5,
@@ -39,7 +37,7 @@ class CategButton extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
               child: Text(
                 title,
-                style: const TextStyle(color: AppColors.grey, fontSize: 16),
+                style: TextStyles.subTitle,
               ),
             ),
     );

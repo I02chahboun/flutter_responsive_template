@@ -17,7 +17,7 @@ class CategDiscover extends StatelessWidget {
         children: [
           Text(
             AppTexts.categoryDicover,
-            style: TextStyles.titleStyle,
+            style: TextStyles.title,
           ),
           const SizedBox(height: 8),
           SizedBox(

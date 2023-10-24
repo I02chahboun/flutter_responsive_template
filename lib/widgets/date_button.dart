@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_home/constants/colors.dart';
+import 'package:responsive_home/constants/styles.dart';
 
 class DateButton extends StatelessWidget {
   final String day;
@@ -24,15 +25,13 @@ class DateButton extends StatelessWidget {
           Expanded(
             child: Text(
               day,
-              style: const TextStyle(fontSize: 12, color: AppColors.grey),
+              style: TextStyles.body,
             ),
           ),
           Text(
             nume.toString(),
-            style: const TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 14,
-                color: AppColors.black),
+            style: TextStyles.body
+                .copyWith(fontWeight: FontWeight.bold, color: AppColors.black),
           ),
         ]),
       ),

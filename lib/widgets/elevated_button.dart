@@ -21,7 +21,7 @@ class ElevatedButtonn extends StatelessWidget {
             shadowColor: MaterialStateProperty.all(AppColors.grey)),
         child: Text(
           AppTexts.searchButton,
-          style: TextStyles.titleButton,
+          style: TextStyles.button.copyWith(color: AppColors.white),
         ));
   }
 }
