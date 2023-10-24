@@ -23,8 +23,9 @@ class CategEvent extends StatelessWidget {
                 AppTexts.categoryEvent,
                 style: TextStyles.title,
               ),
-              const CategButton(
+              CategButton(
                 title: AppTexts.viewAll,
+                onTap: () {},
               ),
             ],
           ),

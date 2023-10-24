@@ -11,6 +11,7 @@ class CategDiscover extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ValueNotifier<int> indx = ValueNotifier(0);
     return SizedBox(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -27,24 +28,32 @@ class CategDiscover extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Expanded(
-                  child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemCount: categoryDicover.length,
-                    itemBuilder: (context, index) {
-                      final String cateogry = categoryDicover[index];
-                      return Padding(
-                        padding: EdgeInsets.symmetric(
-                            horizontal: index == 0 ? 0.0 : 8.0),
-                        child: Center(
-                          child: CategButton(
-                            title: cateogry,
-                          ),
-                        ),
-                      );
-                    },
-                  ),
+                  child: ValueListenableBuilder(
+                      valueListenable: indx,
+                      builder: (context, value, _) {
+                        return ListView.builder(
+                          scrollDirection: Axis.horizontal,
+                          itemCount: categoryDicover.length,
+                          itemBuilder: (context, index) {
+                            final String cateogry = categoryDicover[index];
+                            return Padding(
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: index == 0 ? 0.0 : 8.0),
+                              child: Center(
+                                child: CategButton(
+                                  title: cateogry,
+                                  isSelected: index == indx.value,
+                                  onTap: () {
+                                    indx.value = index;
+                                  },
+                                ),
+                              ),
+                            );
+                          },
+                        );
+                      }),
                 ),
-                const CategButton(title: AppTexts.viewAll)
+                CategButton(title: AppTexts.viewAll, onTap: () {})
               ],
             ),
           ),
