@@ -11,7 +11,8 @@ class NotificationIcon extends StatelessWidget {
       backgroundColor: AppColors.badge,
       child: IconButton.filled(
         onPressed: () {},
-        icon: const Icon(Icons.notifications_none_rounded),
+        icon: const Icon(Icons.notifications_none_rounded,
+            color: AppColors.blueGrey),
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all<Color>(AppColors.white),
         ),
