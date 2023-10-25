@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_home/constants/colors.dart';
 import 'package:responsive_home/constants/styles.dart';
 import 'package:responsive_home/constants/texts.dart';
+import 'package:responsive_home/utils/extensions.dart';
 
 class CategButton extends StatelessWidget {
   final String title;
@@ -27,7 +28,9 @@ class CategButton extends StatelessWidget {
                 Text(
                   title,
                   style: TextStyles.subTitle.copyWith(
-                      color: AppColors.green, fontWeight: FontWeight.w700),
+                      color: AppColors.green,
+                      fontWeight: FontWeight.w700,
+                      fontSize: context.isSmall ? 14 : null),
                 ),
                 const SizedBox(
                   width: 5,
@@ -45,7 +48,8 @@ class CategButton extends StatelessWidget {
                 title,
                 style: TextStyles.subTitle.copyWith(
                     color: isSelected ? AppColors.green : null,
-                    fontWeight: FontWeight.w600),
+                    fontWeight: FontWeight.w600,
+                    fontSize: context.isSmall ? 14 : null),
               ),
             ),
     );

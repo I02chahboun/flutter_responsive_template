@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_home/constants/styles.dart';
 import 'package:responsive_home/constants/texts.dart';
 import 'package:responsive_home/models/card_model.dart';
+import 'package:responsive_home/utils/extensions.dart';
 import 'package:responsive_home/widgets/story_card.dart';
 import 'package:responsive_home/widgets/categ_button.dart';
 
@@ -38,7 +39,11 @@ class CategDiscover extends StatelessWidget {
                             final String cateogry = categoryDicover[index];
                             return Padding(
                               padding: EdgeInsets.symmetric(
-                                  horizontal: index == 0 ? 0.0 : 8.0),
+                                  horizontal: index == 0
+                                      ? 0.0
+                                      : context.isSmall
+                                          ? 0.5
+                                          : 8.0),
                               child: Center(
                                 child: CategButton(
                                   title: cateogry,
@@ -57,9 +62,11 @@ class CategDiscover extends StatelessWidget {
               ],
             ),
           ),
-          const SizedBox(height: 10),
+          if (!context.isSmall) const SizedBox(height: 10),
           SizedBox(
-            height: Sizes.height(context) / 2.6,
+            height: context.isSmall
+                ? Sizes.height(context) / 2.9
+                : Sizes.height(context) / 2.6,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: discoverData.length,

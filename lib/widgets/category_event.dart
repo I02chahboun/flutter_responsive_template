@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_home/constants/styles.dart';
 import 'package:responsive_home/constants/texts.dart';
 import 'package:responsive_home/models/card_model.dart';
+import 'package:responsive_home/utils/extensions.dart';
 import 'package:responsive_home/widgets/categ_button.dart';
 import 'package:responsive_home/widgets/filter_dates.dart';
 import 'package:responsive_home/widgets/list_tile_card.dart';
@@ -30,15 +31,17 @@ class CategEvent extends StatelessWidget {
           ),
           const SizedBox(height: 8),
           SizedBox(
-            height: Sizes.height(context) * 0.08,
+            height: context.isSmall
+                ? Sizes.height(context) * 0.07
+                : Sizes.height(context) * 0.08,
             child: const FilterDates(),
           ),
           const SizedBox(height: 25),
           GridView.builder(
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: context.getGridViewCount,
                 mainAxisSpacing: 20,
                 crossAxisSpacing: 20,
                 childAspectRatio: 1,

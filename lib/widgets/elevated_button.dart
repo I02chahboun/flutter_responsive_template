@@ -13,6 +13,8 @@ class ElevatedButtonn extends StatelessWidget {
     return ElevatedButton(
         onPressed: () {},
         style: ButtonStyle(
+            padding: MaterialStateProperty.all(
+                const EdgeInsets.symmetric(horizontal: 10)),
             backgroundColor: MaterialStateProperty.all(AppColors.green),
             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                 RoundedRectangleBorder(

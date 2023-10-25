@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_home/constants/colors.dart';
 import 'package:responsive_home/constants/styles.dart';
+import 'package:responsive_home/utils/extensions.dart';
 import 'package:responsive_home/widgets/category_discover.dart';
 import 'package:responsive_home/widgets/category_event.dart';
 import 'package:responsive_home/widgets/list_tile.dart';
@@ -11,25 +12,31 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: Sizes.height(context),
-      margin: const EdgeInsets.all(15),
-      decoration: BoxDecoration(
-        borderRadius: Corners.med,
-        color: AppColors.greenAccent,
-      ),
-      child: const SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
-          child: Column(
-            children: [
-              ListTilee(),
-              Search(),
-              SizedBox(height: 30),
-              CategDiscover(),
-              SizedBox(height: 20),
-              CategEvent(),
-            ],
+    return ColoredBox(
+      color: AppColors.greenAccent,
+      child: SafeArea(
+        child: Container(
+          height: Sizes.height(context),
+          margin: context.isSmall ? null : const EdgeInsets.all(15),
+          decoration: BoxDecoration(
+            borderRadius: Corners.med,
+            color: AppColors.greenAccent,
+          ),
+          child: SingleChildScrollView(
+            child: Padding(
+              padding: EdgeInsets.symmetric(
+                  horizontal: context.isSmall ? 10.0 : 20.0, vertical: 10),
+              child: const Column(
+                children: [
+                  ListTilee(),
+                  Search(),
+                  SizedBox(height: 30),
+                  CategDiscover(),
+                  SizedBox(height: 20),
+                  CategEvent(),
+                ],
+              ),
+            ),
           ),
         ),
       ),
