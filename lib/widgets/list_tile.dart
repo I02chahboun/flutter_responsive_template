@@ -3,7 +3,7 @@ import 'package:responsive_home/constants/styles.dart';
 import 'package:responsive_home/constants/texts.dart';
 import 'package:responsive_home/utils/extensions.dart';
 import 'package:responsive_home/widgets/notification_icon.dart';
-import 'package:responsive_home/widgets/profile_icon.dart';
+import 'package:responsive_home/widgets/icon_home.dart';
 
 class ListTilee extends StatelessWidget {
   const ListTilee({super.key});
@@ -15,7 +15,7 @@ class ListTilee extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         if (context.isSmall)
-          ProfileIcon(
+          IconHome(
               icon: Icons.menu,
               onPressed: () {
                 Scaffold.of(context).openDrawer();
@@ -37,7 +37,7 @@ class ListTilee extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       const NotificationIcon(),
-                      ProfileIcon(icon: Icons.person, onPressed: () {})
+                      IconHome(icon: Icons.person, onPressed: () {})
                     ],
                   )
                 : const NotificationIcon(),
