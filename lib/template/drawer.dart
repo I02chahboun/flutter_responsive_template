@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_home/constants/colors.dart';
+import 'package:responsive_home/constants/texts.dart';
 import 'package:responsive_home/widgets/drawers_list_view.dart';
+import 'package:responsive_home/widgets/filled_button_icon.dart';
 import 'package:responsive_home/widgets/logo_list_tile.dart';
 
 class MyDrawer extends StatelessWidget {
@@ -11,15 +13,15 @@ class MyDrawer extends StatelessWidget {
     return Container(
       color: AppColors.white,
       padding: const EdgeInsets.all(15),
-      child: const Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            LogoListTile(),
-            SizedBox(height: 25),
-            Expanded(
-              child: DrawersListView(),
-            ),
-          ]),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        const LogoListTile(),
+        const SizedBox(height: 25),
+        const Expanded(
+          child: DrawersListView(),
+        ),
+        FilledButtonIcon(
+            icon: Icons.logout, label: AppTexts.logOut, onPressed: () {}),
+      ]),
     );
   }
 }
