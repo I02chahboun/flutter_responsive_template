@@ -12,7 +12,13 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: context.isSmall ? const Drawer() : null,
+      drawer: context.isSmall
+          ? const Drawer(
+              backgroundColor: AppColors.white,
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
+              child: MyDrawer(),
+            )
+          : null,
       backgroundColor: AppColors.white,
       body: SizedBox(
         height: Sizes.height(context),
