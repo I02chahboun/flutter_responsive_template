@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_home/constants/styles.dart';
 import 'package:responsive_home/constants/texts.dart';
+import 'package:responsive_home/template/profile.dart';
 import 'package:responsive_home/utils/extensions.dart';
 import 'package:responsive_home/widgets/notification_icon.dart';
 import 'package:responsive_home/widgets/icon_home.dart';
@@ -37,7 +38,14 @@ class ListTilee extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       const NotificationIcon(),
-                      IconHome(icon: Icons.person, onPressed: () {})
+                      IconHome(
+                          icon: Icons.person,
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const Profile()));
+                          }),
                     ],
                   )
                 : const NotificationIcon(),
