@@ -23,35 +23,31 @@ class DateButton extends StatelessWidget {
         borderRadius: BorderRadius.vertical(
             top: Radius.circular(30), bottom: Radius.circular(30)),
       ),
-      child: AspectRatio(
-        aspectRatio: 0.6,
-        child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 6),
-          decoration: BoxDecoration(
-            color: isSelected ? AppColors.green : null,
-            borderRadius: const BorderRadius.vertical(
-                top: Radius.circular(30), bottom: Radius.circular(30)),
-          ),
-          child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Expanded(
-                  child: Text(
-                    day,
-                    style: TextStyles.body.copyWith(
-                        color: isSelected ? AppColors.white : null,
-                        fontSize: 9),
-                  ),
-                ),
-                Text(
-                  nume.toString(),
-                  style: TextStyles.body.copyWith(
-                      fontWeight: FontWeight.bold,
-                      color: isSelected ? AppColors.white : AppColors.blueGrey),
-                ),
-              ]),
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 6),
+        decoration: BoxDecoration(
+          color: isSelected ? AppColors.green : null,
+          borderRadius: const BorderRadius.vertical(
+              top: Radius.circular(30), bottom: Radius.circular(30)),
         ),
+        child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Expanded(
+                child: Text(
+                  day,
+                  style: TextStyles.body.copyWith(
+                      color: isSelected ? AppColors.white : null, fontSize: 9),
+                ),
+              ),
+              Text(
+                nume.toString(),
+                style: TextStyles.body.copyWith(
+                    fontWeight: FontWeight.bold,
+                    color: isSelected ? AppColors.white : AppColors.blueGrey),
+              ),
+            ]),
       ),
     );
   }
