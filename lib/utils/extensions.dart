@@ -14,10 +14,8 @@ extension BuildContextExtensions on BuildContext {
   int get getGridViewCount {
     if (isSmall) {
       return 1;
-    } else if (isMeduim) {
-      return 2;
     } else {
-      return 4;
+      return 2;
     }
   }
 }
