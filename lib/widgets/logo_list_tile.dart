@@ -11,7 +11,9 @@ class LogoListTile extends StatelessWidget {
     return Row(
       children: [
         Image.asset(AppAssets.logo, fit: BoxFit.contain, height: 70, width: 70),
-        Text(AppTexts.titleLogo, style: TextStyles.title),
+        Expanded(
+            child: Text(AppTexts.titleLogo,
+                style: TextStyles.title, softWrap: false)),
       ],
     );
   }

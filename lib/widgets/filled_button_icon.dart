@@ -30,7 +30,8 @@ class FilledButtonIcon extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 8.0),
           child: Text(label,
               style: TextStyles.button
-                  .copyWith(color: isSelected ? AppColors.white : null)),
+                  .copyWith(color: isSelected ? AppColors.white : null),
+              softWrap: false),
         ));
   }
 }
