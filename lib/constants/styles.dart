@@ -16,10 +16,3 @@ class Corners {
   static BorderRadius sm = const BorderRadius.all(Radius.circular(10));
   static BorderRadius med = const BorderRadius.all(Radius.circular(18));
 }
-
-class Sizes {
-  static double height(BuildContext context) =>
-      MediaQuery.of(context).size.height;
-  static double width(BuildContext context) =>
-      MediaQuery.of(context).size.width;
-}
