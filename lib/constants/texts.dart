@@ -1,5 +1,5 @@
 class AppTexts {
-  static const String userDev = "Hello, I02Chahboun";
+  static const String userDev = "I02Chahboun";
   static const String categoryDicover = "Discover World";
   static const String welcome = "Welcome back and explore the world";
   static const String catg1 = "Popular Places";
