@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_home/constants/styles.dart';
 import 'package:responsive_home/utils/extensions.dart';
 import 'package:responsive_home/widgets/icon_button.dart';
 import 'package:responsive_home/widgets/elevated_button.dart';
@@ -11,9 +10,7 @@ class Search extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: context.isSmall
-          ? Sizes.height(context) * 0.06
-          : Sizes.height(context) * 0.07,
+      height: context.isSmall ? context.height * 0.06 : context.height * 0.07,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

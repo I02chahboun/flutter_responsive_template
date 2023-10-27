@@ -24,7 +24,7 @@ class CategDiscover extends StatelessWidget {
             ),
           if (!context.isSmall) const SizedBox(height: 8),
           SizedBox(
-            height: Sizes.height(context) * 0.06,
+            height: context.height * 0.06,
             child: Row(
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -70,9 +70,8 @@ class CategDiscover extends StatelessWidget {
           ),
           if (!context.isSmall) const SizedBox(height: 10),
           SizedBox(
-            height: context.isSmall
-                ? Sizes.height(context) / 2.9
-                : Sizes.height(context) / 2.6,
+            height:
+                context.isSmall ? context.height / 2.9 : context.height / 2.6,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: discoverData.length,

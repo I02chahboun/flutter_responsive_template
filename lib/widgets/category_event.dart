@@ -31,9 +31,8 @@ class CategEvent extends StatelessWidget {
           ),
           const SizedBox(height: 8),
           SizedBox(
-            height: context.isSmall
-                ? Sizes.height(context) * 0.07
-                : Sizes.height(context) * 0.08,
+            height:
+                context.isSmall ? context.height * 0.07 : context.height * 0.08,
             child: const FilterDates(),
           ),
           GridView.builder(

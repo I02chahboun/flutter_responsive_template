@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_home/constants/colors.dart';
-import 'package:responsive_home/constants/styles.dart';
 import 'package:responsive_home/template/drawer.dart';
 import 'package:responsive_home/template/home.dart';
 import 'package:responsive_home/template/profile.dart';
@@ -12,17 +11,10 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: context.isSmall
-          ? const Drawer(
-              backgroundColor: AppColors.white,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
-              child: MyDrawer(),
-            )
-          : null,
       backgroundColor: AppColors.white,
       body: SizedBox(
-        height: Sizes.height(context),
-        width: Sizes.width(context),
+        height: context.height,
+        width: context.width,
         child: Row(
           children: [
             if (!context.isSmall) const Expanded(child: MyDrawer()),
