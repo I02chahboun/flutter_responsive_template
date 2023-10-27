@@ -25,8 +25,9 @@ class Home extends StatelessWidget {
         child: Column(
           children: [
             ListTilee(),
+            SizedBox(height: 7),
             Search(),
-            SizedBox(height: 30),
+            SizedBox(height: 20),
             CategDiscover(),
             SizedBox(height: 20),
             CategEvent(),

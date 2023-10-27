@@ -17,11 +17,12 @@ class CategDiscover extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            AppTexts.categoryDicover,
-            style: TextStyles.title,
-          ),
-          const SizedBox(height: 8),
+          if (!context.isSmall)
+            Text(
+              AppTexts.categoryDicover,
+              style: TextStyles.title,
+            ),
+          if (!context.isSmall) const SizedBox(height: 8),
           SizedBox(
             height: Sizes.height(context) * 0.06,
             child: Row(
@@ -29,34 +30,39 @@ class CategDiscover extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Expanded(
-                  child: ValueListenableBuilder(
-                      valueListenable: indx,
-                      builder: (context, value, _) {
-                        return ListView.builder(
-                          scrollDirection: Axis.horizontal,
-                          itemCount: categoryDicover.length,
-                          itemBuilder: (context, index) {
-                            final String cateogry = categoryDicover[index];
-                            return Padding(
-                              padding: EdgeInsets.symmetric(
-                                  horizontal: index == 0
-                                      ? 0.0
-                                      : context.isSmall
-                                          ? 0.5
-                                          : 8.0),
-                              child: Center(
-                                child: CategButton(
-                                  title: cateogry,
-                                  isSelected: index == indx.value,
-                                  onTap: () {
-                                    indx.value = index;
-                                  },
-                                ),
-                              ),
+                  child: context.isSmall
+                      ? Text(
+                          AppTexts.categoryDicover,
+                          style: TextStyles.title,
+                        )
+                      : ValueListenableBuilder(
+                          valueListenable: indx,
+                          builder: (context, value, _) {
+                            return ListView.builder(
+                              scrollDirection: Axis.horizontal,
+                              itemCount: categoryDicover.length,
+                              itemBuilder: (context, index) {
+                                final String cateogry = categoryDicover[index];
+                                return Padding(
+                                  padding: EdgeInsets.symmetric(
+                                      horizontal: index == 0
+                                          ? 0.0
+                                          : context.isSmall
+                                              ? 0.5
+                                              : 8.0),
+                                  child: Center(
+                                    child: CategButton(
+                                      title: cateogry,
+                                      isSelected: index == indx.value,
+                                      onTap: () {
+                                        indx.value = index;
+                                      },
+                                    ),
+                                  ),
+                                );
+                              },
                             );
-                          },
-                        );
-                      }),
+                          }),
                 ),
                 CategButton(title: AppTexts.viewAll, onTap: () {})
               ],
