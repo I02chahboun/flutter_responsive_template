@@ -17,7 +17,8 @@ class HomePage extends StatelessWidget {
         width: context.width,
         child: Row(
           children: [
-            if (!context.isSmall) const Expanded(child: MyDrawer()),
+            if (!context.isSmall)
+              SizedBox(width: context.width / 6, child: const MyDrawer()),
             const Expanded(flex: 3, child: Home()),
             if (!context.isSmall) const Expanded(child: Profile())
           ],

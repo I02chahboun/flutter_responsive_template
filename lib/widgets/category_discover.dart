@@ -80,10 +80,7 @@ class CategDiscover extends StatelessWidget {
                 return Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: StoryCard(
-                    image: story.image,
-                    title: story.title,
-                    subTitle: story.subTitle,
-                    price: story.price,
+                    model: story,
                   ),
                 );
               },

@@ -1,17 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_home/constants/colors.dart';
 import 'package:responsive_home/constants/styles.dart';
+import 'package:responsive_home/models/card_model.dart';
 import 'package:responsive_home/widgets/favorite_icon.dart';
 
 class StoryCard extends StatelessWidget {
-  final String image, title, subTitle;
-  final double price;
-  const StoryCard(
-      {super.key,
-      required this.image,
-      required this.title,
-      required this.subTitle,
-      required this.price});
+  final CardModel model;
+  const StoryCard({super.key, required this.model});
 
   @override
   Widget build(BuildContext context) {
@@ -21,8 +16,8 @@ class StoryCard extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         decoration: BoxDecoration(
             borderRadius: Corners.med,
-            image:
-                DecorationImage(image: AssetImage(image), fit: BoxFit.cover)),
+            image: DecorationImage(
+                image: AssetImage(model.image), fit: BoxFit.cover)),
         child: Align(
           alignment: Alignment.bottomCenter,
           child: Container(
@@ -37,15 +32,15 @@ class StoryCard extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Text(title,
+                        Text(model.title,
                             style: TextStyles.title.copyWith(fontSize: 15),
                             softWrap: false,
                             overflow: TextOverflow.fade),
-                        Text(subTitle,
+                        Text(model.subTitle,
                             style: TextStyles.subTitle.copyWith(fontSize: 13),
                             softWrap: false,
                             overflow: TextOverflow.fade),
-                        Text(price.toString(),
+                        Text(model.price.toString(),
                             style: TextStyles.body.copyWith(fontSize: 11),
                             softWrap: false,
                             overflow: TextOverflow.fade),

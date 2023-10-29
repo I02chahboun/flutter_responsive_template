@@ -48,7 +48,7 @@ class CategEvent extends StatelessWidget {
             itemCount: eventData.length,
             itemBuilder: (context, index) {
               final CardModel event = eventData[index];
-              return ListTileCard(event: event);
+              return ListTileCard(model: event);
             },
           ),
         ],
