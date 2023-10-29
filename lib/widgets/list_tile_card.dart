@@ -5,8 +5,9 @@ import 'package:responsive_home/models/card_model.dart';
 import 'package:responsive_home/widgets/favorite_icon.dart';
 
 class ListTileCard extends StatelessWidget {
-  final CardModel event;
-  const ListTileCard({super.key, required this.event});
+  final CardModel model;
+  final bool isDestion;
+  const ListTileCard({super.key, required this.model, this.isDestion = false});
 
   @override
   Widget build(BuildContext context) {
@@ -16,12 +17,13 @@ class ListTileCard extends StatelessWidget {
         borderRadius: Corners.sm,
         color: AppColors.white,
         boxShadow: [
-          BoxShadow(
-            color: AppColors.grey.withOpacity(0.3),
-            spreadRadius: 2,
-            blurRadius: 10,
-            offset: const Offset(0, 3),
-          ),
+          if (!isDestion)
+            BoxShadow(
+              color: AppColors.grey.withOpacity(0.3),
+              spreadRadius: 2,
+              blurRadius: 10,
+              offset: const Offset(0, 3),
+            ),
         ],
       ),
       child: Row(
@@ -34,7 +36,7 @@ class ListTileCard extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: Corners.sm,
                   image: DecorationImage(
-                      image: AssetImage(event.image), fit: BoxFit.cover),
+                      image: AssetImage(model.image), fit: BoxFit.cover),
                 ),
               ),
             ),
@@ -49,17 +51,17 @@ class ListTileCard extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(event.title,
+                    Text(model.title,
                         style: TextStyles.title.copyWith(fontSize: 15),
                         softWrap: false,
                         overflow: TextOverflow.fade),
                     const SizedBox(height: 2),
-                    Text(event.subTitle,
+                    Text(model.subTitle,
                         style: TextStyles.subTitle.copyWith(fontSize: 13),
                         softWrap: false,
                         overflow: TextOverflow.fade),
-                    const Spacer(),
-                    Text("${event.price}/day",
+                    if (!isDestion) const Spacer(),
+                    Text("${model.price}/day",
                         style: TextStyles.body.copyWith(fontSize: 11),
                         softWrap: false,
                         overflow: TextOverflow.fade),
@@ -67,7 +69,7 @@ class ListTileCard extends StatelessWidget {
                 ),
               ),
             ),
-            const FavoriteButton(),
+            if (!isDestion) const FavoriteButton(),
           ]),
     );
   }

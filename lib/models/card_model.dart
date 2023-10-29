@@ -23,6 +23,21 @@ final List<CardModel> eventData = [
   CardModel(AppAssets.snow2, AppTexts.snow2, AppTexts.userTreeDesc, 680),
 ];
 
+final List<CardModel> destinationData = [
+  CardModel(
+    AppAssets.nature1,
+    AppTexts.userOne,
+    AppTexts.nature1,
+    0,
+  ),
+  CardModel(
+    AppAssets.nature1,
+    AppTexts.userOne,
+    AppTexts.nature1,
+    0,
+  ),
+];
+
 List<String> categoryDicover = [
   AppTexts.catg1,
   AppTexts.catg2,
