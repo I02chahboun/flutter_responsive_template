@@ -8,4 +8,6 @@ class AppAssets {
   static const String storyNature3 = "assets/story_nature3.jpg";
   static const String backgroundProfile = "assets/backg_profile.jpg";
   static const String logo = "assets/logo.png";
+  static const String account = "assets/account.jpg";
+  static const String profile = "assets/profile.png";
 }
