@@ -14,7 +14,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ColoredBox(
-      color: AppColors.greenAccent,
+      color: AppColors.white,
       child: SafeArea(
         child: Scaffold(
           drawer: context.isSmall
@@ -26,13 +26,14 @@ class Home extends StatelessWidget {
                   child: const MyDrawer(),
                 )
               : null,
-          backgroundColor: AppColors.greenAccent,
+          backgroundColor: AppColors.white,
           body: Container(
             height: context.height,
             margin: context.isSmall ? null : const EdgeInsets.all(18),
             padding: EdgeInsets.symmetric(
                 horizontal: context.isSmall ? 10.0 : 20.0, vertical: 10),
             decoration: BoxDecoration(
+              color: AppColors.greenAccent,
               borderRadius: context.isSmall ? null : Corners.med,
             ),
             child: const SingleChildScrollView(
