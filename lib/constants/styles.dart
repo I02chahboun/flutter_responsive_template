@@ -16,3 +16,15 @@ class Corners {
   static BorderRadius sm = const BorderRadius.all(Radius.circular(10));
   static BorderRadius med = const BorderRadius.all(Radius.circular(18));
 }
+
+class Gradients {
+  static LinearGradient gradient = LinearGradient(
+      stops: const [0.0, 0.5, 1.0],
+      begin: Alignment.topCenter,
+      end: Alignment.bottomCenter,
+      colors: [
+        AppColors.blueGrey.withOpacity(0.5),
+        Colors.transparent,
+        AppColors.blueGrey.withOpacity(0.5)
+      ]);
+}
