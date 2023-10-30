@@ -13,19 +13,24 @@ class DestinationListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
+      mainAxisSize: MainAxisSize.min,
       children: [
         Text(AppTexts.destination,
             style: TextStyles.title.copyWith(color: AppColors.white)),
         const SizedBox(height: 10),
         Expanded(
           child: ListView.builder(
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
             itemCount: destinationData.length,
             itemBuilder: (context, index) {
               final CardModel destion = destinationData[index];
               return Padding(
                 padding: const EdgeInsets.symmetric(vertical: 8.0),
                 child: SizedBox(
-                  height: context.height * 0.15,
+                  height: context.isSmall
+                      ? context.height * 0.16
+                      : context.height * 0.13,
                   child: ListTileCard(
                     model: destion,
                     isDestion: true,
