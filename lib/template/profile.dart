@@ -50,7 +50,7 @@ class Profile extends StatelessWidget {
                         textAlign: TextAlign.center),
                     const SizedBox(height: 30),
                     SizedBox(
-                        height: context.height * 0.4,
+                        height: context.height * 0.42,
                         child: const DestinationListView()),
                   ]),
             ),
