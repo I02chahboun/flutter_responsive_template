@@ -6,12 +6,7 @@ class AppTexts {
   static const String catg2 = "Recommended";
   static const String catg3 = "Near Me";
   static const String viewAll = "View all";
-  static const String userOne = "El-fouad";
-  static const String userTwo = "M97Chahboun";
   static const String userTree = "I02Chahboun";
-  static const String userOneDesc = "web full stack";
-  static const String userTwoDesc = "full stack";
-  static const String userTreeDesc = "software enginner";
   static const String categoryEvent = "Event Dates";
   static const String dashboard = "Dashboard";
   static const String discover = "Discover";
@@ -37,4 +32,9 @@ class AppTexts {
   static const String nature2 = "Mt. Slamet";
   static const String snow1 = "Mt. Latuk";
   static const String snow2 = "Mt. Cereme";
+  static const String place = "Natural places";
+  static const String benwidane = "Bin lwidan";
+  static const String ouzoud = "Ouzoud";
+  static const String hossaima = "Hossaima";
+  static const String subTitle = "software engineering";
 }
