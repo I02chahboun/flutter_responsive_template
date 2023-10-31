@@ -21,7 +21,6 @@ class DestinationListView extends StatelessWidget {
         Expanded(
           child: ListView.builder(
             shrinkWrap: true,
-            physics: const NeverScrollableScrollPhysics(),
             itemCount: destinationData.length,
             itemBuilder: (context, index) {
               final CardModel destion = destinationData[index];
@@ -29,7 +28,7 @@ class DestinationListView extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(vertical: 8.0),
                 child: SizedBox(
                   height: context.isSmall
-                      ? context.height * 0.16
+                      ? context.height * 0.11
                       : context.height * 0.13,
                   child: ListTileCard(
                     model: destion,
