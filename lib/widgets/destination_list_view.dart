@@ -22,6 +22,7 @@ class DestinationListView extends StatelessWidget {
           child: ListView.builder(
             shrinkWrap: true,
             itemCount: destinationData.length,
+            physics: const BouncingScrollPhysics(),
             itemBuilder: (context, index) {
               final CardModel destion = destinationData[index];
               return Padding(
